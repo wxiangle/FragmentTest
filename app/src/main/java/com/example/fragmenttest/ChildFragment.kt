@@ -14,9 +14,10 @@ import android.widget.TextView
  * email : wang_x_le@163.com
  */
 
-class Fragment1 : Fragment() {
+class Fragment1 : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        Log.d(TAG,"onCreateView")
         val view = inflater.inflate(R.layout.fragment_1, container,false )
         view.findViewById<TextView>(R.id.tv_text).setOnClickListener {
             val data = "数据为${Math.random() * 100}"

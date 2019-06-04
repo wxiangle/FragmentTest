@@ -14,11 +14,12 @@ import android.view.ViewGroup
  * email : wang_x_le@163.com
  */
 
-class ViewPagerFragment : Fragment() {
+class ViewPagerFragment : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_view_pager, container,false ).apply {
-            findViewById<ViewPager>(R.id.view_pager).adapter = ViewPagerAdapter(activity?.supportFragmentManager!!).apply {
+            Log.d(TAG,"onCreateView")
+            findViewById<ViewPager>(R.id.view_pager).adapter = ViewPagerAdapter(childFragmentManager).apply {
                 mfragments = arrayListOf(
                     Fragment1.newInstance().apply {
                         mOnFragmentClickListener = object : OnFragmentClickListener {
