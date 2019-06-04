@@ -13,7 +13,6 @@
 .externalNativeBuild
 gradlew
 gradlew.bat
-settings.gradle
 .idea/encodings.xml
 .idea/gradle.xml
 .idea/misc.xml
